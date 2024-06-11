@@ -13,6 +13,7 @@ import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import { getProducts } from '@/data/fetches/Products';
 import {  useSearchParams } from 'next/navigation';
 import { fetchProductType } from '@/data/types';
+import { useRouter } from 'next/navigation';
 // import dynamic from 'next/dynamic';
 
 // // Dynamically import the SidebarFilters component
@@ -25,13 +26,15 @@ import { fetchProductType } from '@/data/types';
 
 
 const page =  () => {
-
-
+  const router = useRouter() ;
+const LIMITNUMER = 40
   const searchParams = useSearchParams()
  const price =  searchParams.get("rangePrices");
  const category = searchParams.get("activeCategoy")
  const magazin = searchParams.get("activeMagazin");
+ const search = searchParams.get("search");
 
+const [limit , setLimit] = useState<number>(LIMITNUMER)
 
 
   const [product, setProduct] = useState<fetchProductType | null>(null);
@@ -41,14 +44,14 @@ const page =  () => {
       try {
         const response = await getProducts({
           params: {
-            limit: 10,
+            limit,
             customPrice:price,
             category,
-            magazin
+            magazin,
+            search
           }
         });
         setProduct(response);
-        console.log('Fetched products:', response);
       } catch (error) {
         console.error('Failed to fetch products:', error);
       }
@@ -56,14 +59,30 @@ const page =  () => {
     fetchProducts();
     
 
-    console.log('Query parameters:', price);
-  }, [price ,category , magazin ]); // Depend on the query directly
+  }, [price ,category , magazin , search ,limit]); // Depend on the query directly
 
+  const handleSearch = (e:any) => {
+    // if (e.key === 'Enter') {
+ 
+    // }
 
+    const params = new URLSearchParams(window.location.search);
+    if (e.target.value) {
+      params.set('search', e.target.value);
+    } else {
+      params.delete('search');
+    }
+    router.push(`/products?${params.toString()}`);
+
+  };
+const handleLimit = () => {
+  setLimit((prev)=>prev+limit)
+}
   return (
     <div className="">
       <div className="container relative flex flex-col lg:flex-row" id="body">
         <div className="pr-4 pt-10 lg:basis-1/3 xl:basis-1/4">
+        
           <SidebarFilters  />
         </div>        
         <div className="mb-10 shrink-0 border-t lg:mx-4 lg:mb-0 lg:border-t-0" />
@@ -72,11 +91,12 @@ const page =  () => {
             <div className="flex flex-1 items-center gap-2 rounded-full border border-neutral-300 px-4">
               <MdSearch className="text-2xl text-neutral-500" />
               <Input
-                type="password"
+                type="search"
                 rounded="rounded-full"
                 placeholder="Search..."
                 sizeClass="h-12 px-0 py-3"
                 className="border-transparent bg-transparent placeholder:text-neutral-500 focus:border-transparent"
+                onChange={handleSearch}
               />
             </div>
             <div className="flex items-center gap-5">
@@ -102,7 +122,7 @@ const page =  () => {
   )}
 </div>
           <div className="mt-14 flex items-center justify-center">
-        <ButtonPrimary>View More</ButtonPrimary>
+        <ButtonPrimary onClick={handleLimit}>View More</ButtonPrimary>
       </div>
         </div>
       </div>

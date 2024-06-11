@@ -16,7 +16,7 @@ console.log(request.nextUrl.pathname);
 // }
 
   // If trying to access login or register page and user is authenticated, redirect to home page
-  if (token && (path.startsWith('/register') || path.startsWith('/login'))) {
+  if (token && (path.startsWith('/register') ||  path.startsWith('/login'))) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
@@ -31,32 +31,9 @@ console.log(request.nextUrl.pathname);
   if (role === "user" && !path.startsWith('/user') ) {
     return NextResponse.redirect(new URL("/user", request.url));
   }
-  // If role is owner and trying to access user routes, redirect to owner routes
-   if (role === "owner" && !path.startsWith('/owner') ) {
-    return NextResponse.redirect(new URL("/owner", request.url));
-  }
-  // If role is user and trying to access owner routes, redirect to user routes
-   if (role === "user" && !path.startsWith('/user')) {
-    return NextResponse.redirect(new URL("/user", request.url));
-  }
-
 
 
 }
-
-
-
-
-//  if (token && ( request.nextUrl.pathname.startsWith('/owner') && role ==="owner")) {
-//   return NextResponse.redirect(new URL("/owner",request.url));
-// }
-
- 
-//   if (token && (request.nextUrl.pathname.startsWith('/user') && role === "user")) {
-//     return NextResponse.redirect(new URL("/",request.url));
-//   }
-
- 
 
 
   return NextResponse.next();
@@ -66,7 +43,7 @@ console.log(request.nextUrl.pathname);
 }
 
 export const config = {
-  matcher: ['/user/:path*'  , '/owner/:path*','/register','/login'],
+  matcher: ['/user/:path*','/register','/login'],
   api: {
     bodyParser: false // Disable bodyParser to access request.cookies
   }

@@ -22,6 +22,13 @@ export default bundleAnalyzer({
       },
       {
         protocol: 'https',
+        hostname: 'ma.jumia.is',
+        port: '',
+        pathname: '/**',
+      },
+    
+      {
+        protocol: 'https',
         hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
@@ -31,8 +38,28 @@ export default bundleAnalyzer({
         hostname:"via.placeholder.com",
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol:"https",
+        hostname:"maps.googleapis.com",
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol:"https",
+        hostname:"luxloom.themealchemy.com",
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol:"https",
+        hostname:"luxloom.themealchemy.https",
+        port: '',
+        pathname: '/**',
+       
       }
     ],
+    
   },
   poweredByHeader: false,
   reactStrictMode: true,

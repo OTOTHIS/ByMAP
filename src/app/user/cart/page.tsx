@@ -7,7 +7,7 @@ import { MdStar } from 'react-icons/md';
 import LikeButton from '@/components/LikeButton';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import InputNumber from '@/shared/InputNumber/InputNumber';
-import { CartItemType } from '@/data/types';
+import { CartItemType, cleanProductImages } from '@/data/types';
 import Loading from '../../loading';
 import EmtyCard from '@/shared/Heading/emtyCard';
 import { useCart } from '@/context/cartContext';
@@ -21,7 +21,7 @@ const renderProduct = (item:CartItemType) => {
       <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl md:h-40 md:w-40">
         <Image
           fill
-          src={product.image}
+          src={cleanProductImages(product.images)[0]  ?? 'default'}
           alt={product.title}
           className="h-full w-full object-contain object-center"
         />

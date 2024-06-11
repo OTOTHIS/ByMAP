@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
@@ -26,24 +26,29 @@ const {setUserApi} = useUser()
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(formSchema),
   });
+  const [redirectUrl, setRedirectUrl] = useState('/');
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const redirect = queryParams.get('redirect');
+    if (redirect) {
+      setRedirectUrl(redirect);
+    }
+  }, []);
+
 
   const onSubmit = async (values: any) => {
     try {
       console.log(values)
       const user:UserType = await loginAction(values.email, values.password);
         setUserApi(user)
-      // Handle routing based on role
-      switch (user.role) {
-        case "owner":
-          router.push("/owner");
-          break;
-        case "user":
-          router.push("/user");
-          break;
-        default:
-          router.push("/");
-          break;
-      }
+     
+        if(user.role == 'user'){
+          // router.push("/user");
+          router.push(redirectUrl);
+        }else{
+          router.push("/register");
+        }
     } catch (error) {
       // Handle login error
       console.error("Error during login:", error);

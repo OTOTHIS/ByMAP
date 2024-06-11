@@ -4,15 +4,15 @@ import React from 'react';
 import { footerData } from '@/data/content';
 
 import Logo from '../Logo/Logo';
-import FooterBanner from './FooterBanner';
+// import FooterBanner from './FooterBanner';
 import Subscribe from './Subscribe';
 
 const Footer: React.FC = () => {
   return (
     <div>
-      <div className="container mb-10">
+      {/* <div className="container mb-10">
         <FooterBanner />
-      </div>
+      </div> */}
 
       <div className="bg-black text-white">
         <div className="container grid gap-10 py-16 lg:grid-cols-2 lg:gap-0">

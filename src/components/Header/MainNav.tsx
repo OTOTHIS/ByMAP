@@ -17,6 +17,8 @@ import { usePathname } from 'next/navigation';
 import { useUser } from '@/context/userContext';
 import {  fetchProductType } from '@/data/types';
 import { getProducts } from '@/data/fetches/Products';
+import ButtonCircle from '@/shared/Button/ButtonCircle';
+import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 
 const MainNav =  () => {
 const cookie = new Cookies()
@@ -25,7 +27,17 @@ const {userApi} = useUser();
 const auth = cookie.get('userRole');
 
 const [Product, setProduct] = useState<fetchProductType>()
+const [isOpen, setIsOpen] = useState(false);
 
+const toggleDropdown = () => {
+  setIsOpen(!isOpen);
+};
+
+const closeDropdown = () => {
+  setIsOpen(false);
+};
+
+const {logout} = useUser()
 const searshProduct  = async (e: React.ChangeEvent<HTMLInputElement>) =>{
   const val = e.target.value ;
   try {
@@ -68,28 +80,63 @@ const searshProduct  = async (e: React.ChangeEvent<HTMLInputElement>) =>{
           <span className="absolute -top-1/4 left-3/4 aspect-square w-3 rounded-full bg-red-600" />
           <FaRegBell className="text-2xl" />
         </div> :''} 
-        
+
+       {!auth && <div className="relative hidden lg:block">
+          <Link href={'/login'} >LOGIN</Link>
+        </div>} 
+
 
         <div className="flex items-center divide-x divide-neutral-300">
       {(auth && path != '/cart') ? <CartSideBar /> :''} 
-          <div className="flex items-center gap-2 pl-5">
-            <ButtonCircle3 className="overflow-hidden bg-gray" size="w-10 h-10">
-              <Image
-                src={avatar}
-                alt="avatar"
-                className="h-full w-full object-cover object-center"
-              />
-            </ButtonCircle3>
-            <Link href="/Profile" className="hidden text-sm lg:block">
-              
-             {
+  
 
-              //@ts-ignore
-             userApi?.firstname
-             
-             }
-            </Link>
-          </div>
+<div className="relative  text-left flex items-center gap-3">
+      <button
+        id="dropdownButton"
+        onClick={toggleDropdown}
+        
+        className=" bg-gray w-10 h-10 rounded-full"
+      >
+        <Image
+          src={avatar}
+          alt="avatar"
+          className="h-full w-full object-cover object-center"
+        />
+      </button>
+   
+      {isOpen && (
+        <div onMouseLeave={toggleDropdown} className="z-10 absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+          <ul className="py-2 text-sm text-gray-700 " >
+          <li>
+              <span className="block px-4 py-2 hover:bg-gray-100 border-b-2 border-b-slate-300
+              ">
+                
+              {userApi?.firstname}
+              </span>
+            </li>
+
+
+          <li>
+              <Link href="/Favorites" className="block px-4 py-2 hover:bg-gray-100">
+                Favorite
+              </Link>
+            </li>
+            {/* <li>
+              <Link href="/test" className="block px-4 py-2 hover:bg-gray-100">
+                twa
+              </Link>
+            </li> */}
+            <li>
+              <button onClick={()=> {
+                logout()
+              }} className="block px-4 py-2 hover:bg-gray-100">
+                Deconexion
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>
         </div>
       </div>
     </div>

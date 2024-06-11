@@ -1,40 +1,45 @@
-import preview from '@/images/preview.jpg';
-import notFound from '@/images/preview/404.jpg';
-import blogPage from '@/images/preview/blogs.jpg';
-import blogSingle from '@/images/preview/blogsingle.jpg';
-import cart from '@/images/preview/cart.jpg';
-import checkout from '@/images/preview/checkout.jpg';
-import collection from '@/images/preview/collection.jpg';
-import contact from '@/images/preview/contact.jpg';
-import faq from '@/images/preview/faq.jpg';
-import forgotPass from '@/images/preview/forgotPass.jpg';
-import login from '@/images/preview/login.jpg';
-import showcase1 from '@/images/preview/showcase1.jpg';
-import showcase2 from '@/images/preview/showcase2.jpg';
-import signup from '@/images/preview/signup.jpg';
-import singleProduct from '@/images/preview/singleProduct.jpg';
+
 
 export const templateDetails = {
-  name: 'HotKicks Ecommerce NextJS Template',
+  name: 'ByMAP',
   description:
     'Presenting HotKicks Template, the ultimate ecommerce template in NextJS.',
-  screenshotsOne: [
-    preview,
-    collection,
-    singleProduct,
-    blogPage,
-    blogSingle,
-    preview,
-  ],
-  screenshotsTwo: [
-    preview,
-    blogSingle,
-    blogPage,
-    singleProduct,
-    collection,
-    preview,
-  ],
+
 };
+
+export const profilesPhotos:string[] = [
+  'https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1930&q=80',
+  'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80',
+  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+];
+
+
+export const midText =
+  'Browse through our carefully carted collection of high-quality clothing & accessories featuring the latest trends and style';
+
+
+  export const promoSection = {
+    heading: 'Style Is A Way To Say Who You Are Without Having To Speak',
+    promoTitle: 'Get 29% Off This Holiday Season Using The Code',
+    photo:
+      'https://images.unsplash.com/photo-1565288971009-a6db8844c687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXw5OTUwNDc1fHxlbnwwfHx8fHw%3D',
+    review: {
+      quote: `"Clothes and manners do not make the man; but when he is made, they greatly improve his appearance."`,
+      reviewer: 'Arthur Ashe',
+    },
+  };
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const templateIncludes = {
   heading: `What is included in ${templateDetails.name}`,
@@ -43,23 +48,7 @@ export const templateIncludes = {
   font: 'Poppins',
 };
 
-export const includesCardsData = [
-  {
-    coverImage: preview,
-    title: `pages`,
-    spanText: `10+ pages`,
-  },
-  {
-    coverImage: collection,
-    title: `sections`,
-    spanText: `20+ sections`,
-  },
-  {
-    coverImage: showcase2,
-    title: `font`,
-    spanText: `Poppins`,
-  },
-];
+
 
 export const midSection = {
   heading: 'Looking for more amazing Templates?',
@@ -68,109 +57,3 @@ export const midSection = {
   href: 'https://www.themealchemy.com',
 };
 
-export const mainPages = {
-  heading: 'Main pages',
-  description: `Take a look at the main pages included in the ${templateDetails.name}`,
-  pages: [
-    {
-      coverImage: preview,
-      pageName: 'Home',
-      href: '/home',
-      CMS: false,
-    },
-    {
-      coverImage: blogPage,
-      pageName: 'Blog',
-      href: '/blog',
-      CMS: false,
-    },
-    {
-      coverImage: blogSingle,
-      pageName: 'Blog Single',
-      href: '/blog/the-evolution-of-sneaker-culture-a-historical-perspective',
-      CMS: false,
-    },
-    {
-      coverImage: collection,
-      pageName: 'Products',
-      href: '/products',
-      CMS: false,
-    },
-    {
-      coverImage: singleProduct,
-      pageName: 'Product Single',
-      href: '/products/yellowLow',
-      CMS: false,
-    },
-    {
-      coverImage: faq,
-      pageName: 'FAQs',
-      href: '/faqs',
-      CMS: false,
-    },
-    {
-      coverImage: cart,
-      pageName: 'Cart',
-      href: '/cart',
-      CMS: false,
-    },
-    {
-      coverImage: notFound,
-      pageName: 'Not Found',
-      href: '/gg',
-      CMS: false,
-    },
-  ],
-};
-
-export const utilityPages = {
-  heading: 'Utility pages',
-  description: `Take a look at the utility pages included in the ${templateDetails.name}`,
-  pages: [
-    {
-      coverImage: login,
-      pageName: 'Login',
-      href: '/login',
-    },
-    {
-      coverImage: signup,
-      pageName: 'Signup',
-      href: '/login',
-    },
-    {
-      coverImage: forgotPass,
-      pageName: 'Forgot Password',
-      href: '/forgot-pass',
-    },
-    {
-      coverImage: checkout,
-      pageName: 'Checkout',
-      href: '/',
-    },
-    {
-      coverImage: contact,
-      pageName: 'Contact',
-      href: '/contact',
-    },
-  ],
-};
-
-export const browseTemplates = {
-  heading: 'Browse All Templates',
-  description:
-    'Take a look at our collection of 100+ premium Templates at ThemeAlchemy.',
-  href: 'https://www.themealchemy.com',
-  coverImage: showcase1,
-  buttonName: 'Buy Template',
-};
-
-export const buyTemplate = {
-  heading: 'Buy Template on ThemeAlchemy',
-  description:
-    'Take a look at our collection of 100+ premium Templates at ThemeAlchemy.',
-  href: 'https://www.themealchemy.com',
-  coverImage: showcase2,
-  buttonName: 'Explore more templates',
-};
-
-export const buyOrExplore = [browseTemplates, buyTemplate];

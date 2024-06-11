@@ -1,26 +1,47 @@
 "use client"
 import { axiosClient } from '@/components/axios/axios';
 import { UserType } from '@/data/types';
+import { useRouter } from 'next/navigation';
 import React, { createContext, useContext, useEffect, useState, ReactNode, FC } from 'react';
-
+import Cookies from 'universal-cookie';
 // Define the shape of the context value
 interface UserContextType {
   userApi?: UserType;
   setUserApi: React.Dispatch<React.SetStateAction<UserType | undefined>>;
   getUser: () => void;
+  logout:()=>void
 }
 
 // Create the context with a default value of undefined
 const UserContext = createContext<UserContextType | undefined>(undefined);
-
+const cookie = new Cookies()
 // Function to fetch user data
 //@ts-ignore
+// const fetchUser = async (): Promise<UserType | undefined> => {
+//   try {
+//     const res = await axiosClient.get('/user');
+//     return res.data;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
 const fetchUser = async (): Promise<UserType | undefined> => {
   try {
     const res = await axiosClient.get('/user');
     return res.data;
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    if (error.response && error.response.status === 401) {
+      // Unauthorized, remove cookie and role
+      cookie.remove('Authorization'); // Adjust the cookie name as needed
+      cookie.remove('userRole'); // Adjust the role cookie name as needed
+      localStorage.removeItem('cart')
+
+      // Optionally, you can also handle any additional state management here
+      console.log('User is not authenticated. Cookies and roles removed.');
+    } else {
+      console.error(error);
+    }
   }
 };
 
@@ -32,7 +53,7 @@ interface UserProviderProps {
 // UserProvider component
 export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   const [userApi, setUserApi] = useState<UserType>();
-
+  const router = useRouter();
   const getUser = () => {
     fetchUser().then(setUserApi).catch(console.error);
   };
@@ -40,9 +61,22 @@ export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   useEffect(() => {
     fetchUser().then(setUserApi).catch(console.error);
   }, []);
+  const logout = async () => {
+    try {
+      await axiosClient.post('/logout');
+  
+     localStorage.removeItem('cart');
+     cookie.remove('Authorization');
+     cookie.remove('userRole');
+     router.push('/');
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
 
+  
   return (
-    <UserContext.Provider value={{ userApi, setUserApi, getUser }}>
+    <UserContext.Provider value={{ userApi, setUserApi, getUser , logout }}>
       {children}
     </UserContext.Provider>
   );

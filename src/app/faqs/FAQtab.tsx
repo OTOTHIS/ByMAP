@@ -7,7 +7,7 @@ import { faqsData } from '@/data/content';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 
 const FAQtab = () => {
-  const [activeTab, setActiveTab] = useState('Shipping');
+  const [activeTab, setActiveTab] = useState('Livraison');
 
   return (
     <div className="flex flex-col items-center justify-center space-y-10">

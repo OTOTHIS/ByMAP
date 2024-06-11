@@ -1,10 +1,28 @@
+// import { StaticImageData } from "next/image";
 
+
+
+
+// export function cleanProductImages(images:string){
+//   return images.replace(/[[\]\"\\]/g, "").split(',')
+//   }
+
+export function cleanProductImages(images: string) {
+  if(Array.isArray(images)){
+    return images
+  }
+  return images.replace(/[\[\]\"\\]/g, '').split(',');
+
+  }
+
+
+  
 export type ProductType = {
   slug: string;
   title: string;
   category_name: string;
   category:CategorieType;
-  image:  string;
+  images:  string;
   price: number;
   oldprice: number;
   magazin_name: string;
@@ -12,14 +30,17 @@ export type ProductType = {
   id: number
   pieces_sold: number;
   justIn: boolean;
-  reviews:[
-    {
-      content:string,
-      rating:number
-    }
-  ]
+  reviews:Review[]
 };
 
+export type Review = {
+  id:number,
+  commmenttitle:string,
+  created_at:string
+    content:string,
+    rating:number,
+    user:UserType
+}
 export type CartType = {
   id:number,
   totalPrice:number,
@@ -37,8 +58,42 @@ magazinas:magazinType,
 
 type magazinType = {
  id:number,
- name:string
+ name:string,
+ 
 }
+
+export type Magazin = {
+  id: number;
+  name: string;
+  Latitude: string;
+  Longitude: string;
+  image: string;
+  owner_id: number;
+  deleted_at: string | null;
+  created_at: string;
+  updated_at: string;
+  products: ProductType[];
+};
+
+export type PaginatedMagazins = {
+  current_page: number;
+  data: Magazin[];
+  first_page_url: string;
+  from: number;
+  last_page: number;
+  last_page_url: string;
+  links: {
+      url: string | null;
+      label: string;
+      active: boolean;
+  }[];
+  next_page_url: string | null;
+  path: string;
+  per_page: number;
+  prev_page_url: string | null;
+  to: number;
+  total: number;
+};
 
 // {
 //   "id": 1,
@@ -102,7 +157,9 @@ export type fetchProductType = {
   result: number,
   data: ProductType[],
   current_page: number,
-  last_page: number
+  last_page: number,
+  min_price:number, 
+  max_price :number
 }
 export type BlogData = {
   sectionOne: {

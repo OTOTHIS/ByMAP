@@ -1,35 +1,39 @@
 'use client';
 
-// import Image from 'next/image';
-// import { pathOr } from 'ramda';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import type { FC } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import LikeButton from './LikeButton';
 
 interface ImageShowCaseProps {
-  image: string;
+  shots: string[];
+  productId:string
 }
 
-const ImageShowCase: FC<ImageShowCaseProps> = ({ image }) => {
-  // const [activeImageIndex, setActiveImageIndex] = useState(0);
+const ImageShowCase: FC<ImageShowCaseProps> = ({ shots }) => {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  // Function to remove backslashes from URLs
+  // const cleanUrl = (url: string) => url.replace(/\\/g, '');
  
   return (
     <div className="space-y-3 rounded-2xl border border-neutral-300 p-2">
       <div className="relative overflow-hidden rounded-2xl md:h-[520px]">
-        <LikeButton productId='' className="absolute right-5 top-5" />
-        <img
-          src={image}
+        <LikeButton productId="" className="absolute right-5 top-5" />
+        <Image
           width={500}
           height={500}
-          alt={"shoe image test " + image}
+          src={shots[activeImageIndex]??'test'}
+          alt="shoe image"
           className="h-full w-full object-cover object-center"
         />
       </div>
-      {/* <div className="grid grid-cols-4 gap-3">
-        {image.map((img, index) => (
+      <div className="grid grid-cols-4 gap-3">
+        {shots.map((shot, index) => (
           <div
-            key={img.src}
+            key={index}
             className={`${
               activeImageIndex === index ? 'border-2 border-primary' : ''
             } h-[100px] overflow-hidden rounded-lg`}
@@ -40,14 +44,16 @@ const ImageShowCase: FC<ImageShowCaseProps> = ({ image }) => {
               onClick={() => setActiveImageIndex(index)}
             >
               <Image
-                src={img}
+                height={200}
+                width={200}
+                src={shot}
                 alt="shoe image"
                 className="h-full w-full object-cover object-center"
               />
             </button>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

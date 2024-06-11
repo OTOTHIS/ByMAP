@@ -1,42 +1,14 @@
-import { BsBoxFill } from 'react-icons/bs';
-import { FaCalendarAlt } from 'react-icons/fa';
-import { FaTruckFast } from 'react-icons/fa6';
+
 import { FiBox } from 'react-icons/fi';
 import { IoChatboxOutline } from 'react-icons/io5';
 import { MdOutlineCameraAlt } from 'react-icons/md';
-import { PiPercentFill } from 'react-icons/pi';
 
 import type { NavItemType } from '@/components/NavItem';
-import airForce1 from '@/images/airForce1.webp';
-import blackLebron from '@/images/blackLebron.webp';
-import brownsb from '@/images/brownsb.webp';
-import brsb from '@/images/brsb.webp';
-import compass_profile from '@/images/compass_profile.jpeg';
-import compass1 from '@/images/compass1.jpg';
-import compass2 from '@/images/compass2.jpg';
-import compass3 from '@/images/compass3.png';
-import compass4 from '@/images/compass4.jpg';
-import dunklow from '@/images/dunklow.webp';
-import lebronxx from '@/images/lebronxx.webp';
-import metcon5 from '@/images/metcon5.webp';
-import metcon9 from '@/images/metcon9.webp';
-import new_balance from '@/images/new_balance.png';
-import new_balance1 from '@/images/new_balance1.webp';
-import new_balance2 from '@/images/new_balance2.webp';
-import new_balance3 from '@/images/new_balance3.webp';
-import new_balance4 from '@/images/new_balance4.webp';
-import nike_blazer from '@/images/nike_blazer.webp';
-import nike_profile from '@/images/nike_profile.jpg';
-import redlow from '@/images/redlow.webp';
-import shot1 from '@/images/shots/shot1.webp';
-import shot2 from '@/images/shots/shot2.webp';
-import shot3 from '@/images/shots/shot3.jpeg';
-import shot4 from '@/images/shots/shot4.jpeg';
-import shot5 from '@/images/shots/shot5.webp';
-import shot6 from '@/images/shots/shot6.jpeg';
-import shot7 from '@/images/shots/shot7.webp';
-import slides from '@/images/slides.webp';
-import yellowLow from '@/images/yellowLow.webp';
+
+
+
+
+
 
 import type { BlogType } from './types';
 
@@ -55,6 +27,11 @@ export const topNavLinks: NavItemType[] = [
     id: 'eexct',
     name: 'Collections',
     href: '/products',
+  },
+  {
+    id: 'ewrwrw',
+    name: 'Magazins',
+    href: '/magazins',
   },
   {
     id: 'h6ii8g',
@@ -94,7 +71,11 @@ export const NavLinks: NavItemType[] = [
     name: 'Collection',
     href: '/products',
   },
-
+  {
+    id: 'ewrwrw',
+    name: 'Magazins',
+    href: '/magazins',
+  },
   {
     id: 'h6ii8g',
     name: 'Contact',
@@ -130,452 +111,6 @@ export const promotionTag = {
     'Join the sneaker fest 2023 on 23 October. We have more fun gigs too and supported by FootWear!.',
 };
 
-export const shoes = [
-  {
-    slug: 'airForce1',
-    shoeName: 'Air Force 1',
-    coverImage: airForce1,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [airForce1, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'blackLebron',
-    shoeName: 'Lebron Black',
-    coverImage: blackLebron,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: true,
-    shots: [blackLebron, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'brownsb',
-    shoeName: 'SB Low Brown',
-    coverImage: brownsb,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [brownsb, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'brsb',
-    shoeName: 'BRSB',
-    coverImage: brsb,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [brsb, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'dunklow',
-    shoeName: 'Dunk Low',
-    coverImage: dunklow,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [dunklow, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'lebronxx',
-    shoeName: 'Lebron XXL',
-    coverImage: lebronxx,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [lebronxx, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'metcon5',
-    shoeName: 'Metcon 5',
-    coverImage: metcon5,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: true,
-    shots: [metcon5, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'metcon9',
-    shoeName: 'Metcon 9',
-    coverImage: metcon9,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [metcon9, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'nike_blazer',
-    shoeName: 'Nike Blazer',
-    coverImage: nike_blazer,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: true,
-    shots: [nike_blazer, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'redlow',
-    shoeName: 'Dunk Low Red',
-    coverImage: redlow,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [redlow, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'slides',
-    shoeName: 'Slides',
-    coverImage: slides,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: false,
-    shots: [slides, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-  {
-    slug: 'yellowLow',
-    shoeName: 'Dunk Low Yellow',
-    coverImage: yellowLow,
-    currentPrice: 199,
-    previousPrice: 250,
-    shoeCategory: "Men's shoes",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    justIn: true,
-    shots: [yellowLow, shot1, shot2, shot3, shot4, shot5, shot6, shot7],
-    overview:
-      'When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.',
-    shipment_details: [
-      {
-        icon: <PiPercentFill className="text-xl text-secondary" />,
-        title: 'Discount',
-        description: '> $100 Disc 10%',
-      },
-      {
-        icon: <FaCalendarAlt className="text-xl text-secondary" />,
-        title: 'Delivery Time',
-        description: '6 - 12 Working days',
-      },
-      {
-        icon: <BsBoxFill className="text-xl text-secondary" />,
-        title: 'Package',
-        description: 'Reagular Premium Box',
-      },
-      {
-        icon: <FaTruckFast className="text-xl text-secondary" />,
-        title: 'Estimated Arrival',
-        description: '10 - 12 October 23',
-      },
-    ],
-  },
-];
 
 export const productsSection = {
   heading: 'Shop Now, Look Good Later',
@@ -603,35 +138,35 @@ export const brandsSection = {
   heading: 'The Official Store of The Amazing Brand',
   description:
     'We work together with high quality and famous brands around the world',
-  brands: [
-    {
-      brandName: 'New Balance',
-      rating: 4.9,
-      reviews: 10334,
-      followers: 7.2,
-      visitLink: 'https://www.newbalance.com',
-      logo: new_balance,
-      shoes: [new_balance1, new_balance2, new_balance3, new_balance4],
-    },
-    {
-      brandName: 'Compass',
-      rating: 4.9,
-      reviews: 10334,
-      followers: 8.5,
-      visitLink: 'https://www.sepatucompass.com/',
-      logo: compass_profile,
-      shoes: [compass1, compass2, compass3, compass4],
-    },
-    {
-      brandName: 'Nike',
-      rating: 4.9,
-      reviews: 10334,
-      followers: 11.2,
-      visitLink: 'https://nike.com',
-      logo: nike_profile,
-      shoes: [yellowLow, redlow, dunklow, lebronxx],
-    },
-  ],
+  // magazins: [
+  //   {
+  //     brandName: 'New Balance',
+  //     rating: 4.9,
+  //     reviews: 10334,
+  //     followers: 7.2,
+  //     visitLink: 'https://www.newbalance.com',
+  //     logo: new_balance,
+  //     shoes: [new_balance1, new_balance2, new_balance3, new_balance4],
+  //   },
+  //   {
+  //     brandName: 'Compass',
+  //     rating: 4.9,
+  //     reviews: 10334,
+  //     followers: 8.5,
+  //     visitLink: 'https://www.sepatucompass.com/',
+  //     logo: compass_profile,
+  //     shoes: [compass1, compass2, compass3, compass4],
+  //   },
+  //   {
+  //     brandName: 'Nike',
+  //     rating: 4.9,
+  //     reviews: 10334,
+  //     followers: 11.2,
+  //     visitLink: 'https://nike.com',
+  //     logo: nike_profile,
+  //     shoes: [yellowLow, redlow, dunklow, lebronxx],
+  //   },
+  // ],
 };
 
 export const footerBannerData = {
@@ -702,21 +237,73 @@ export const shoeSizes = [
 export const note =
   ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, est eum magnam doloremque, at adipisci debitis, similique dolores ipsa unde necessitatibus vero quibusdam nostrum numquam!';
 
+// export const contactSection = {
+//   heading: 'Contact us',
+//   description:
+//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis quis phasellus eleifend tellus orci ornare.',
+//   directContactInfoHeader: {
+//     heading: 'Prefer to reach out directly?',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh magna sit diam pharetra.',
+//   },
+//   directContactInfo: [
+//     {
+//       icon: <FiBox className="text-5xl" />,
+//       title: 'Sales',
+//       description:
+//         'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+//       contactLink: {
+//         href: 'mailto:sales@hotkicks.com',
+//         title: 'sales@hotkicks.com',
+//       },
+//     },
+//     {
+//       icon: <IoChatboxOutline className="text-5xl" />,
+//       title: 'Support',
+//       description:
+//         'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+//       contactLink: {
+//         href: 'mailto:support@hotckicks.com',
+//         title: 'support@hotckicks.com',
+//       },
+//     },
+//     {
+//       icon: <MdOutlineCameraAlt className="text-5xl" />,
+//       title: 'Influencers',
+//       description:
+//         'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+//       contactLink: {
+//         href: 'mailto:influencers@hotckicks.com',
+//         title: 'influencers@hotckicks.com',
+//       },
+//     },
+//   ],
+//   instagramPhotos: [
+//     'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=1479&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1463100099107-aa0980c362e6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     'https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//   ],
+// };
+
+
+
 export const contactSection = {
-  heading: 'Contact us',
+  heading: 'Contactez-nous',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis quis phasellus eleifend tellus orci ornare.',
+    'Nous sommes là pour vous aider. Que vous ayez une question sur nos produits, une demande de support ou une proposition de collaboration, n’hésitez pas à nous contacter.',
   directContactInfoHeader: {
-    heading: 'Prefer to reach out directly?',
+    heading: 'Préférez-vous nous joindre directement ?',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh magna sit diam pharetra.',
+      'Nous sommes disponibles par email pour répondre à toutes vos questions et préoccupations. Choisissez le service que vous souhaitez contacter.',
   },
   directContactInfo: [
     {
       icon: <FiBox className="text-5xl" />,
-      title: 'Sales',
+      title: 'Ventes',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+        'Pour toute question concernant nos produits ou nos offres, contactez notre équipe de ventes.',
       contactLink: {
         href: 'mailto:sales@hotkicks.com',
         title: 'sales@hotkicks.com',
@@ -726,20 +313,20 @@ export const contactSection = {
       icon: <IoChatboxOutline className="text-5xl" />,
       title: 'Support',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+        'Pour toute assistance technique ou demande de support, notre équipe est là pour vous aider.',
       contactLink: {
-        href: 'mailto:support@hotckicks.com',
-        title: 'support@hotckicks.com',
+        href: 'mailto:support@hotkicks.com',
+        title: 'support@hotkicks.com',
       },
     },
     {
       icon: <MdOutlineCameraAlt className="text-5xl" />,
-      title: 'Influencers',
+      title: 'Influenceurs',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipiscing elit blandit velit semper aliquam.',
+        'Vous êtes influenceur et souhaitez collaborer avec nous ? Contactez notre équipe dédiée aux partenariats.',
       contactLink: {
-        href: 'mailto:influencers@hotckicks.com',
-        title: 'influencers@hotckicks.com',
+        href: 'mailto:influencers@hotkicks.com',
+        title: 'influencers@hotkicks.com',
       },
     },
   ],
@@ -752,304 +339,261 @@ export const contactSection = {
   ],
 };
 
+
+
 export const faqsData = {
-  heading: 'Frequently Asked Questions',
+  heading: 'Questions Fréquemment Posées',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget adipiscing nibh nunc. Velit rhoncus arcu velesaed.',
+    'Retrouvez ici les réponses aux questions les plus courantes sur nos services, produits, livraisons et plus encore.',
   faqs: [
     {
-      category: 'Shipping',
+      category: 'Livraison',
       data: [
         {
-          question: 'How can I track my order?',
+          question: 'Comment puis-je suivre ma commande ?',
           answer:
-            'You can track your order by logging into your account and checking the order status. Additionally, a tracking number will be provided in the shipping confirmation email.',
+            'Vous pouvez suivre votre commande en vous connectant à votre compte et en vérifiant le statut de la commande. De plus, un numéro de suivi sera fourni dans l\'email de confirmation d\'expédition.',
         },
         {
-          question: 'What is the estimated delivery time for my order?',
+          question: 'Quel est le délai de livraison estimé pour ma commande ?',
           answer:
-            'Delivery times vary based on your location. Typically, domestic orders take 3-5 business days, while international orders may take 7-14 business days.',
+            'Les délais de livraison varient en fonction de votre emplacement. En général, les commandes nationales prennent 3 à 5 jours ouvrables, tandis que les commandes internationales peuvent prendre de 7 à 14 jours ouvrables.',
         },
         {
-          question: 'Can I change my shipping address after placing an order?',
+          question: 'Puis-je changer mon adresse de livraison après avoir passé une commande ?',
           answer:
-            'Unfortunately, we cannot change the shipping address once the order is placed. Please double-check your information before completing the purchase.',
+            'Malheureusement, nous ne pouvons pas changer l\'adresse de livraison une fois la commande passée. Veuillez vérifier vos informations avant de finaliser l\'achat.',
         },
         {
-          question: 'Do you offer expedited shipping options?',
+          question: 'Proposez-vous des options de livraison accélérée ?',
           answer:
-            'Yes, we offer expedited shipping at an additional cost. You can choose your preferred shipping method during the checkout process.',
+            'Oui, nous proposons une livraison accélérée moyennant des frais supplémentaires. Vous pouvez choisir votre méthode de livraison préférée lors du processus de paiement.',
         },
         {
-          question: 'What should I do if my order is delayed or lost?',
+          question: 'Que dois-je faire si ma commande est retardée ou perdue ?',
           answer:
-            'If your order is significantly delayed or lost, please contact our customer support team, and we will investigate the issue.',
+            'Si votre commande est significativement retardée ou perdue, veuillez contacter notre service client et nous enquêterons sur le problème.',
+        },
+        {
+          question: 'Quels sont les frais de livraison ?',
+          answer:
+            'Les frais de livraison dépendent de votre emplacement et de la méthode de livraison choisie. Les frais exacts seront calculés lors du passage en caisse.',
         },
       ],
     },
     {
-      category: 'Products',
+      category: 'Produits',
       data: [
         {
-          question: 'How do I determine the right size for my sneakers?',
+          question: 'Comment déterminer la bonne taille pour mes sneakers ?',
           answer:
-            'Refer to our size chart available on the product page. It provides measurements and guidelines to help you choose the correct size.',
+            'Référez-vous à notre guide des tailles disponible sur la page du produit. Il fournit des mesures et des conseils pour vous aider à choisir la bonne taille.',
         },
         {
-          question: 'Are your sneakers authentic?',
+          question: 'Vos sneakers sont-ils authentiques ?',
           answer:
-            'Yes, we guarantee the authenticity of all our sneakers. We source them directly from authorized retailers and reputable suppliers.',
+            'Oui, nous garantissons l\'authenticité de tous nos sneakers. Nous les sourçons directement auprès de détaillants autorisés et de fournisseurs réputés.',
         },
         {
-          question: "Can I return or exchange my sneakers if they don't fit?",
+          question: 'Puis-je retourner ou échanger mes sneakers s\'ils ne me vont pas ?',
           answer:
-            'Yes, we have a hassle-free return policy. You can return or exchange unworn sneakers within 30 days of receiving your order.',
+            'Oui, nous avons une politique de retour sans tracas. Vous pouvez retourner ou échanger des sneakers non portés dans les 30 jours suivant la réception de votre commande.',
         },
         {
-          question: 'Are the colors of the sneakers accurate in the photos?',
+          question: 'Les couleurs des sneakers sont-elles fidèles aux photos ?',
           answer:
-            'We strive to provide accurate color representation, but slight variations may occur due to monitor settings. Refer to product descriptions for additional details.',
+            'Nous nous efforçons de fournir une représentation précise des couleurs, mais de légères variations peuvent se produire en raison des réglages de l\'écran. Consultez les descriptions des produits pour plus de détails.',
         },
         {
-          question: 'Do you restock sold-out sneakers?',
+          question: 'Réapprovisionnez-vous les sneakers en rupture de stock ?',
           answer:
-            'We restock popular styles based on demand. You can sign up for notifications to be informed when a specific product is back in stock.',
+            'Nous réapprovisionnons les styles populaires en fonction de la demande. Vous pouvez vous inscrire aux notifications pour être informé lorsque qu\'un produit spécifique est de nouveau en stock.',
         },
       ],
     },
     {
-      category: 'Payments',
+      category: 'Paiements',
       data: [
         {
-          question: 'What payment methods do you accept?',
+          question: 'Quels modes de paiement acceptez-vous ?',
           answer:
-            'We accept major credit cards, PayPal, and other secure payment methods. You can view the full list during the checkout process.',
+            'Nous acceptons les principales cartes de crédit, PayPal et d\'autres méthodes de paiement sécurisées. Vous pouvez voir la liste complète lors du processus de paiement.',
         },
         {
-          question: 'How can I apply a discount code to my order?',
+          question: 'Comment puis-je appliquer un code de réduction à ma commande ?',
           answer:
-            'Enter your discount code in the designated field during checkout. The discount will be applied to your total before payment.',
+            'Entrez votre code de réduction dans le champ prévu à cet effet lors du paiement. La réduction sera appliquée à votre total avant le paiement.',
         },
         {
-          question: 'Can I modify or cancel my order after payment?',
+          question: 'Puis-je modifier ou annuler ma commande après paiement ?',
           answer:
-            'Once an order is placed, it cannot be modified or canceled. Please review your order carefully before completing the purchase.',
+            'Une fois une commande passée, elle ne peut pas être modifiée ou annulée. Veuillez vérifier attentivement votre commande avant de finaliser l\'achat.',
         },
         {
-          question: 'Is my payment information secure?',
+          question: 'Mes informations de paiement sont-elles sécurisées ?',
           answer:
-            'Yes, we use industry-standard encryption to secure your payment information. Your data is protected and never stored on our servers.',
+            'Oui, nous utilisons le cryptage standard de l\'industrie pour sécuriser vos informations de paiement. Vos données sont protégées et ne sont jamais stockées sur nos serveurs.',
         },
         {
-          question: 'Do you offer gift cards?',
+          question: 'Proposez-vous des cartes-cadeaux ?',
           answer:
-            'Yes, we offer gift cards of various denominations. They make great presents for sneaker enthusiasts!',
+            'Oui, nous proposons des cartes-cadeaux de diverses valeurs. Elles sont parfaites pour les amateurs de sneakers !',
         },
       ],
     },
     {
-      category: 'Returns',
+      category: 'Retours',
       data: [
         {
-          question: 'How do I initiate a return or exchange?',
+          question: 'Comment initier un retour ou un échange ?',
           answer:
-            'Visit the "Returns & Exchanges" page on our website, follow the instructions, and submit a request. Our team will guide you through the process.',
+            'Visitez la page "Retours & Échanges" sur notre site web, suivez les instructions et soumettez une demande. Notre équipe vous guidera tout au long du processus.',
         },
         {
-          question: 'What is your return policy for defective products?',
+          question: 'Quelle est votre politique de retour pour les produits défectueux ?',
           answer:
-            'If you receive a defective product, please contact our customer support within 7 days of receiving the order. We will arrange a replacement or refund.',
+            'Si vous recevez un produit défectueux, veuillez contacter notre service client dans les 7 jours suivant la réception de la commande. Nous organiserons un remplacement ou un remboursement.',
         },
         {
-          question: 'Are there any restocking fees for returns?',
+          question: 'Y a-t-il des frais de restockage pour les retours ?',
           answer:
-            'We do not charge restocking fees for returns. However, please review our return policy for specific details.',
+            'Nous ne facturons pas de frais de restockage pour les retours. Cependant, veuillez consulter notre politique de retour pour les détails spécifiques.',
         },
         {
-          question: 'How long does it take to process a refund?',
+          question: 'Combien de temps faut-il pour traiter un remboursement ?',
           answer:
-            'Refunds are typically processed within 5-7 business days after we receive the returned items and verify their condition.',
+            'Les remboursements sont généralement traités dans les 5 à 7 jours ouvrables après réception et vérification des articles retournés.',
         },
         {
-          question: "Can I return sneakers if I've worn them?",
+          question: 'Puis-je retourner des sneakers si je les ai portés ?',
           answer:
-            'We only accept returns for unworn sneakers. Please try them on in a clean, indoor environment to ensure they are the right fit before wearing them outside.',
+            'Nous acceptons uniquement les retours de sneakers non portés. Veuillez les essayer dans un environnement propre et intérieur pour vous assurer qu\'ils sont à la bonne taille avant de les porter à l\'extérieur.',
+        },
+      ],
+    },
+    {
+      category: 'Vendeurs',
+      data: [
+        {
+          question: 'Comment puis-je devenir vendeur sur Bymap ?',
+          answer:
+            'Pour devenir vendeur sur Bymap, visitez la page "Devenir Vendeur" sur notre site web et remplissez le formulaire de candidature. Notre équipe examinera votre demande et vous contactera avec les prochaines étapes.',
+        },
+        {
+          question: 'Quels sont les critères pour devenir vendeur sur Bymap ?',
+          answer:
+            'Nous recherchons des vendeurs avec des produits authentiques et de haute qualité. Vous devez également être capable de fournir un excellent service client et de respecter nos politiques de vente.',
+        },
+        {
+          question: 'Quels sont les frais pour vendre sur Bymap ?',
+          answer:
+            'Les frais pour vendre sur Bymap varient en fonction de la catégorie de produit et du volume de ventes. Consultez notre page "Frais de Vente" pour plus de détails.',
+        },
+        {
+          question: 'Comment puis-je gérer mes commandes en tant que vendeur ?',
+          answer:
+            'En tant que vendeur, vous pouvez gérer vos commandes via votre tableau de bord vendeur. Vous y trouverez des outils pour suivre les commandes, gérer l\'expédition et communiquer avec les clients.',
+        },
+        {
+          question: 'Quels sont les avantages de vendre sur Bymap ?',
+          answer:
+            'Vendre sur Bymap vous donne accès à une large audience de passionnés de sneakers et de mode. Vous bénéficiez également de notre infrastructure de paiement sécurisée et de notre support client dédié.',
         },
       ],
     },
   ],
 };
 
+
 const demoBlogData = {
   sectionOne: {
-    title: 'What cleaning products are safe for different sneaker materials?',
+    title: 'Quels produits de nettoyage sont sûrs pour les différents matériaux de sneakers ?',
     paragraph1:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Il est crucial de choisir les bons produits de nettoyage pour éviter d’endommager vos sneakers. Les matériaux comme le cuir, le daim et le tissu nécessitent des produits spécifiques pour maintenir leur qualité.',
     points: [
-      'Pretium nibh ipsum consequat nisl vel pretium. Sed vulputate mi sit',
-      'Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer  dolore eu fugiat nulla pariatur',
-      'Nam libero justo laoreet sit amet. Lacus sed viverra tellus in hac',
-      'Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis',
+      'Le cuir nécessite des nettoyants doux et non abrasifs pour préserver son éclat.',
+      'Le daim doit être nettoyé avec des brosses spéciales et des nettoyants conçus pour les matériaux délicats.',
+      'Les tissus peuvent souvent être nettoyés avec des solutions de savon doux et de l’eau.',
+      'Évitez les nettoyants contenant de l’alcool ou des produits chimiques agressifs qui peuvent détériorer les matériaux.',
     ],
     paragraph2:
-      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+      'Utiliser des produits adaptés garantit non seulement la longévité de vos sneakers mais aussi leur apparence impeccable. Prenez le temps de bien choisir et d’appliquer ces produits pour un résultat optimal.',
   },
   sectionTwo: {
-    title: 'Can you provide a step-by-step guide to cleaning sneakers?',
+    title: 'Pouvez-vous fournir un guide étape par étape pour nettoyer les sneakers ?',
     description:
-      'Augue lacus viverra vitae congue eu consequat ac felis donec. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Morbi tristique senectus et netus et malesuada fames ac turpis. Iaculis eu non diam phasellus vestibulum lorem sed.',
+      'Pour nettoyer vos sneakers efficacement, il est important de suivre un processus en plusieurs étapes. Voici un guide simple pour vous aider à maintenir vos chaussures en parfait état.',
     midImage:
       'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   sectionThree: {
-    title: 'How do I prevent and remove stains from my sneakers?',
+    title: 'Comment prévenir et enlever les taches de mes sneakers ?',
     description:
-      'Augue lacus viverra vitae congue eu consequat ac felis donec. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Morbi tristique senectus et netus et malesuada fames ac turpis. Iaculis eu non diam phasellus vestibulum lorem sed.',
+      'Les taches peuvent ruiner l’apparence de vos sneakers. Utilisez des protecteurs de tissu pour prévenir les taches et des nettoyants spécialisés pour les éliminer efficacement.',
   },
   sectionFour: {
-    title:
-      'What are the best practices for drying sneakers without causing damage?',
+    title: 'Quelles sont les meilleures pratiques pour sécher les sneakers sans les endommager ?',
     description:
-      'Bibendum at varius vel pharetra vel turpis nunc. Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Volutpat est velit egestas dui id ornare.',
+      'Sécher vos sneakers correctement est crucial pour éviter les déformations et les dégâts. Voici quelques conseils pour sécher vos chaussures sans les endommager.',
     points: [
-      'Pretium nibh ipsum consequat nisl vel pretium. Sed vulputate mi sit',
-      'Tristique nulla aliquet enim tortor at auctor urna. Sit amet aliquam id diam maer  dolore eu fugiat nulla pariatur',
-      'Nam libero justo laoreet sit amet. Lacus sed viverra tellus in hac',
-      'Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis',
+      'Retirez les semelles et lacets avant de sécher vos sneakers.',
+      'Évitez de les exposer directement à la chaleur intense comme les radiateurs.',
+      'Utilisez des serviettes en papier ou du papier journal pour absorber l’humidité à l’intérieur des chaussures.',
+      'Laissez-les sécher à l’air libre dans un endroit bien ventilé.',
     ],
   },
   quote:
-    '“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor porta rhoncus, viverra sit et auctor. Augue in volutpat sed eget in etiam.”',
+    '“Prenez soin de vos sneakers comme de véritables trésors, ils vous le rendront en restant impeccables plus longtemps.”',
   sectionFive: [
     {
-      title: 'How should I store my sneakers to maintain their quality?',
+      title: 'Comment dois-je stocker mes sneakers pour maintenir leur qualité ?',
       description:
-        'Tincidunt nunc pulvinar sapien et ligula. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Aliquet bibendum enim facilisis gravida neque convallis a cras. Molestie nunc non blandit massa enim nec dui nunc.',
+        'Stocker vos sneakers correctement prolonge leur durée de vie. Utilisez des boîtes de rangement et des inserts pour maintenir leur forme.',
     },
     {
       title:
-        'What special care should be taken to extend the lifespan of sneakers?',
+        'Quels soins particuliers doivent être pris pour prolonger la durée de vie des sneakers ?',
       description:
-        'Tincidunt nunc pulvinar sapien et ligula. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Aliquet bibendum enim facilisis gravida neque convallis a cras. Molestie nunc non blandit massa enim nec dui nunc.',
+        'Un entretien régulier et adapté est essentiel pour garder vos sneakers en bon état. Nettoyez-les après chaque utilisation et protégez-les contre les éléments extérieurs.',
     },
   ],
 };
 
-export const blogs: BlogType[] = [
-  {
-    title: 'The Evolution of Sneaker Culture: A Historical Perspective',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Style',
-    slug: 'the-evolution-of-sneaker-culture-a-historical-perspective',
-  },
-  {
-    title: 'Top 10 Sneaker Trends to Watch in 2023',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1448387473223-5c37445527e7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Fitting',
-    slug: 'top-10-sneaker-trends-to-watch-in-2023',
-  },
-  {
-    title: 'How to Clean and Maintain Your Sneaker Collection',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1469395446868-fb6a048d5ca3?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Style',
-    slug: 'how-to-clean-and-maintain-your-sneaker-collection',
-  },
-  {
-    title:
-      'The Influence of Sneaker Collaborations: From Athletes to Designers',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1659614404055-670edff49a1b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'General',
-    slug: 'the-influence-of-sneaker-collaborations-from-athletes-to-designers',
-  },
-  {
-    title: 'Sneaker Sizing Guide: Finding the Perfect Fit',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1515396800500-75d7b90b3b94?q=80&w=1492&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Style',
-    slug: 'sneaker-sizing-guide-finding-the-perfect-fit',
-  },
-  {
-    title:
-      'Sneaker Collecting 101: Building and Organizing Your Sneaker Collection',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Fitting',
-    slug: 'sneaker-collecting-101-building-and-organizing-your-sneaker-collection',
-  },
-  {
-    title: 'Behind the Design: Sneaker Production Process Unveiled',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1565814636199-ae8133055c1c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'General',
-    slug: 'behind-the-design-sneaker-production-process-unveiled',
-  },
-  {
-    title:
-      'Exploring Limited Edition Sneaker Drops: How to Cop Exclusive Releases',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'General',
-    slug: 'exploring-limited-edition-sneaker-drops-how-to-cop-exclusive-releases',
-  },
-  {
-    title: 'Sneaker Spotlight: Nike Review and Styling Tips',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Style',
-    slug: 'sneaker-spotlight-nike-review-and-styling-tips',
-  },
-  {
-    title: 'Sustainable Sneaker Choices: Eco-Friendly Options in the Market',
-    brief:
-      'Lorem ipsum dolor sit amet, lormol amenrtol consectetur adipiscing elit, sed do eiusmod tempor.',
-    date: 'October 2, 2022',
-    coverImage:
-      'https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    blogData: demoBlogData,
-    tag: 'Style',
-    slug: 'sustainable-sneaker-choices-eco-friendly-options-in-the-market',
-  },
-];
+export const blogs = Array.from({ length: 30 }, (_, i) => ({
+  title: `Blog ${i + 1} - L'évolution de la culture sneaker : Une perspective historique`,
+  brief:
+    'Découvrez comment la culture sneaker a évolué au fil des années et les moments clés qui ont marqué cette tendance.',
+  date: `Octobre ${i % 31 + 1}, 2022`,
+  coverImage:
+    'https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  blogData: demoBlogData,
+  tag: 'Style',
+  slug: `l-evolution-de-la-culture-sneaker-une-perspective-historique-${i + 1}`,
+}));
+
+export const descriptionRapport = `
+1. Introduction
+La phase initiale de la création de ma plateforme comprend une étude préalable. Tout d’abord, nous commençons par la présentation du projet. Ensuite, nous passons à la définition des objectifs à atteindre, ainsi que le champ d’étude.
+
+2. Objectif
+Dans un contexte où la digitalisation du commerce local devient essentielle face aux contraintes telles que la concurrence en ligne et les changements dans les habitudes d'achat, la plateforme Bymap offre une réponse novatrice.
+
+Le secteur du commerce local est confronté à des défis tels que la visibilité limitée des petits commerces, la nécessité de s'adapter aux préférences des consommateurs modernes, et le besoin de renforcer les liens au sein de la communauté. Bymap se positionne comme une solution complémentaire, offrant une vitrine virtuelle aux commerces locaux pour accroître leur visibilité et dynamiser leurs activités.
+
+Le concept de Bymap repose sur une approche innovante, offrant une plus grande flexibilité aux utilisateurs. Ils peuvent désormais explorer et acheter des produits locaux à tout moment, à leur propre rythme et selon leurs disponibilités.
+
+En favorisant le commerce local à travers une plateforme digitale, Bymap aspire à renforcer les liens au sein de la communauté, à encourager l'achat local et à offrir une alternative convaincante aux modèles de commerce traditionnels. Le projet vise à transformer la manière dont les consommateurs interagissent avec les commerces locaux, créant ainsi un écosystème durable et dynamique.
+
+L'objectif principal de la plateforme Bymap est de créer un écosystème numérique qui répond aux besoins des commerçants locaux et des consommateurs de manière intégrée. Cette plateforme ambitionne :
+• Promouvoir le Commerce Local : Favoriser une vitrine numérique pour les commerces locaux afin d'accroître leur visibilité et d'encourager l'achat local.
+• Simplicité d'Utilisation : Garantir une interface intuitive, légère et compatible avec différents navigateurs, offrant une expérience utilisateur fluide tant pour les commerçants que pour les consommateurs.
+• Flexibilité pour les Commerçants : Permettre aux commerçants de planifier, gérer et promouvoir leurs offres de manière flexible à travers une interface ergonomique.
+• Accès Facilité aux Ressources : Offrir aux utilisateurs un accès facile aux informations, aux promotions, et aux services des commerces locaux partenaires.
+• Expérience Personnalisée : Créer un espace personnalisé pour les utilisateurs, où ils peuvent explorer, comparer et acheter des produits locaux de manière adaptée à leurs préférences.
+• Renforcer la Communauté Locale : Encourager le partage, la communication et la collaboration entre les commerces locaux et les consommateurs, favorisant ainsi une communauté dynamique.
+`;
+
+export default blogs;
 
 export const productsCollection = {
   heading: 'Shoes Collection',

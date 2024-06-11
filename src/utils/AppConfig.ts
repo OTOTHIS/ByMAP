@@ -7,3 +7,5 @@ export const AppConfig = {
     'Hotkicks Ecommerce Template in NextJS, React, HTML and TailwindCSS',
   locale: 'en',
 };
+
+

@@ -32,11 +32,11 @@ const SingleProductPage = async ({ params }: { params: { productId: string } }) 
   return (
     <div className="container">
       <SectionNavigation />
-
+{/* 
       <div className="mb-20">
         <SectionProductHeader
           productId ={productId}
-          image={product.image}
+          images={product.images}
           shoeName={product.title}
           prevPrice={product.oldprice}
           currentPrice={product.price}
@@ -44,14 +44,28 @@ const SingleProductPage = async ({ params }: { params: { productId: string } }) 
           pieces_sold={product.price - product.oldprice}
           reviews={Math.floor(Math.random() * (500 - 5 + 1)) + 5}
         />
+      </div> */}
+
+      <div className="mb-20">
+        <SectionProductHeader
+         productId ={productId}
+          images={product.images}
+          shoeName={pathOr('', ['title'], product)}
+          prevPrice={pathOr(0, ['oldprice'], product)}
+          currentPrice={pathOr(0, ['price'], product)}
+          rating={pathOr(0, ['rating'], product)}
+          pieces_sold={pathOr(0, ['pieces_sold'], product)}
+          reviews={pathOr(0, ['reviews'], product)}
+        />
       </div>
 
       <div className="mb-28">
         <SectionProductInfo
-          overview={pathOr('', ['overview'], product)}
+          overview={product.reviews}
           shipment_details={pathOr([], ['shipment_details'], product)}
           ratings={pathOr(0, ['rating'], product)}
           reviews={pathOr(0, ['reviews'], product)}
+        
         />
       </div>
 

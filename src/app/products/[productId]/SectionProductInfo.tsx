@@ -3,9 +3,10 @@ import React from 'react';
 
 import ProductInfoTab from './ProductInfoTab';
 import Ratings from './Ratings';
+import { Review } from '@/data/types';
 
 interface SectionProductInfoProps {
-  overview: string;
+  overview: Review[];
   shipment_details: {
     icon: JSX.Element;
     title: string;

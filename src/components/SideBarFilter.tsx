@@ -43,16 +43,16 @@ const brands = [
 //   'San Francisco',
 // ];
 
-const PRICE_RANGE = [1, 500];
 //
 const  SidebarFilters =  () => {
-  const [rangePrices, setRangePrices] = useState([100, 500]);
+  const [rangePrices, setRangePrices] = useState([20, 900]);
   const [activeBrand, setActiveBrand] = useState('');
   const [activeCategoy, setactiveCategoy] = useState('');
   const [activeMagazin, setActiveMagazin] = useState('');
   const [categories,setCategories]=useState<CategorieType[]>()
   const [magazins,setMagazins]=useState<MagazinType[]>()
   const magazinSersh = useRef('')
+  const PRICE_RANGE = [20, 3564];
 
   const router = useRouter();
 
@@ -115,7 +115,7 @@ try {
       if (name) {
         const res = await axiosClient.get(`/public/magazins?search=${name}`);
         setMagazins(res.data);
-        console.log(res.data);
+  
       } else {
         fetchMagazinsData();
       }

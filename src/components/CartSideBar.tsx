@@ -8,7 +8,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import { FaBagShopping } from 'react-icons/fa6';
 import { MdClose, MdStar } from 'react-icons/md';
 
-import type { CartItemType} from '@/data/types';
+import { cleanProductImages, type CartItemType} from '@/data/types';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
@@ -58,7 +58,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
         <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl">
           <Image
             fill
-            src={product.image}
+            src={cleanProductImages(product.images)[0]}
             alt={product.title}
             className="h-full w-full object-contain object-center"
           />

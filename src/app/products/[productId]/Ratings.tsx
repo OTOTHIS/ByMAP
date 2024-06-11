@@ -44,7 +44,7 @@ const Ratings: FC<RatingsProps> = ({ rating, reviews }) => {
             {rating}
             <span className="text-base text-secondary">/5</span>
           </p>
-          <p className="text-neutral-500">{`(${reviews} Reviews)`}</p>
+          <p className="text-neutral-500">{`(${30} Reviews)`}</p>
         </div>
 
         <div className="w-full space-y-2">

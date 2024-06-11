@@ -3,10 +3,9 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import React from 'react';
 
-import type { ProductType } from '@/data/types';
+import { cleanProductImages, type ProductType } from '@/data/types';
 
 import LikeButton from './LikeButton';
-import { notFound } from 'next/navigation';
 
 interface ProductCardProps {
   product: ProductType;
@@ -19,11 +18,7 @@ const ProductCard: FC<ProductCardProps> = ({
   className,
   showPrevPrice = false,
 }) => {
-
-  if(!product) {
-    return notFound();
-  }
-  return (
+   return (
     <div
       className={`transitionEffect relative rounded-2xl p-3 shadow-md ${className}`}
     >
@@ -41,7 +36,7 @@ const ProductCard: FC<ProductCardProps> = ({
           <Image
           width={500}
           height={500}
-            src={product.image}
+            src={cleanProductImages(product.images)[0]}
             alt={`${product.title} cover photo`}
             className="h-full w-full object-cover object-bottom"
           />
@@ -55,12 +50,12 @@ const ProductCard: FC<ProductCardProps> = ({
               showPrevPrice ? 'block' : 'hidden'
             } text-sm line-through`}
           >
-            ${product.oldprice}
+            {product.oldprice} MAD
           </p>
         </div>
 
         <div className="flex items-center justify-between">
-          <p className="text-sm text-neutral-500">{product.category_name}</p>
+          <p className="text-sm text-neutral-500">{product.category.name}</p>
           <p className="text-lg font-medium text-primary">
             ${product.price}
           </p>
