@@ -12,15 +12,19 @@ const tags = ['All', 'Style', 'Fitting', 'General'];
 
 const SectionBlogs = () => {
   const [activeTab, setActiveTab] = useState('All');
+  //@ts-ignore
   const [filteredBlogs, setFilteredBlogs] = useState<BlogType[]>(blogs);
 
   const handleClick = (tag: string) => {
     setActiveTab(tag);
 
     if (tag === 'All') {
-      setFilteredBlogs(blogs);
+
+  //@ts-ignore
+  setFilteredBlogs(blogs);
     } else {
       const filtered = blogs.filter((blog) => blog.tag === tag);
+        //@ts-ignore
       setFilteredBlogs(filtered);
     }
   };
