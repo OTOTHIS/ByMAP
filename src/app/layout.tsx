@@ -2,7 +2,7 @@ import '@/styles/global.css';
 
 import type { Metadata } from 'next';
 import React, { Suspense } from 'react';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from '@/components/Header/Header';
 import Footer from '@/shared/Footer/Footer';
 
@@ -51,7 +51,9 @@ export default function RootLayout({
       {/* <Component {...pageProps} /> */}
     
         <Header />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <Suspense fallback={<Loading />}>{children}
+        <SpeedInsights />
+        </Suspense>
         <Footer />
         </CartProvider>
         
