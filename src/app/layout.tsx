@@ -14,20 +14,20 @@ export const metadata: Metadata = {
   title: 'ByMAP',
   icons: [
     {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      rel: 'bymap',
+      url: 'assets/images/logobymap.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      url: '/favicon.png',
+      url: '/assets/images/logobymap.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      url: '/favicon.png',
+      url: '/assets/images/logobymap.png',
     },
     {
       rel: 'icon',
