@@ -42,28 +42,32 @@ const SectionProductHeader: FC<SectionProductHeaderProps> = ({
   productId
 }) => {
   const [isAdded, setIsAdded] = useState(false);
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const { addToCartApi } = useCart(); // @ts-ignore
   const router = useRouter();
   //@ts-ignore
-  const { userApi } = useCart(); // Assuming this gives you access to the user state
+  const { userApi } = useCart(); // Supposons que cela vous donne accès à l'état de l'utilisateur
 
   useEffect(() => {
-    const cartData: CartType = JSON.parse(localStorage.getItem('cart') || '[]');
-    const productInCart = cartData.cart_items?.find((item) => item.product.id == Number(productId));
-    if (productInCart) {
-      setIsAdded(true);
+    const cartData: CartType = JSON.parse(localStorage.getItem('cart') || 'null');
+    if (cartData) {
+      const productInCart = cartData?.cart_items.find((item) => item.product.id == Number(productId));
+      if (productInCart) {
+        setIsAdded(true);
+      }
     }
   }, [productId]);
 
   const handleAddToCart = () => {
-    // if (userApi) {
-    //   // User is authenticated, proceed to add to cart
-     
-    // } else {
-    //   // User is not authenticated, redirect to login
-    //   router.push(`/login?redirect=/products/${productId}`);
-    // }
-    addToCartApi(productId);
+    if (selectedSize) {
+      addToCartApi(productId, selectedSize);
+    } else {
+      alert('Veuillez sélectionner une taille d\'abord');
+    }
+  };
+
+  const handleSelectSize = (size: string) => {
+    setSelectedSize(size);
   };
 
   return (
@@ -72,7 +76,7 @@ const SectionProductHeader: FC<SectionProductHeaderProps> = ({
         <ImageShowCase productId={productId} shots={cleanProductImages(images)} />
       </div>
       <div className="basis-[45%]">
-        <Heading className="mb-0" isMain title="new arrival!">
+        <Heading className="mb-0" isMain title="nouveauté !">
           {shoeName}
         </Heading>
         <div className="mb-10 flex items-center">
@@ -94,29 +98,29 @@ const SectionProductHeader: FC<SectionProductHeaderProps> = ({
           <div className="flex items-center gap-1">
             <MdStar className="text-yellow-400" />
             <p className="text-sm">
-              {rating} <span className="text-neutral-500">{`(${reviews} Reviews)`}</span>
+              {rating} <span className="text-neutral-500">{`(${reviews} Avis)`}</span>
             </p>
           </div>
           <GoDotFill className="mx-3 text-neutral-500" />
-          <p className="text-neutral-500">{`${pieces_sold} items sold`}</p>
+          <p className="text-neutral-500">{`${pieces_sold} articles vendus`}</p>
         </div>
         <div className="mb-5 space-y-1">
-          <p className="text-neutral-500 line-through">${prevPrice}</p>
-          <h1 className="text-3xl font-medium">${currentPrice}</h1>
+          <p className="text-neutral-500 line-through">{prevPrice}€</p>
+          <h1 className="text-3xl font-medium">{currentPrice}€</h1>
         </div>
         <div className="mb-5 flex items-end justify-between">
-          <p className="text-xl">Available sizes</p>
+          <p className="text-xl">Tailles disponibles</p>
           <p className="flex items-center gap-1 text-sm text-neutral-500">
-            Size guide <LuInfo />
+            Guide des tailles <LuInfo />
           </p>
         </div>
         <div className="grid grid-cols-3 gap-3">
           {shoeSizes.map((size) => (
-            <ShoeSizeButton key={size} size={size} />
+            <ShoeSizeButton key={size} size={size} onSelectSize={handleSelectSize} />
           ))}
         </div>
         <div className="mt-5 flex items-center gap-5">
-          <ButtonPrimary className="w-full">Buy Now</ButtonPrimary>
+          <ButtonPrimary className="w-full">Acheter Maintenant</ButtonPrimary>
           <ButtonSecondary
             onClick={handleAddToCart}
             className="flex w-full items-center gap-1 border-2 border-primary text-primary"

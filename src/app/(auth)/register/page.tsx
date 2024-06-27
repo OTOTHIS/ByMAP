@@ -14,7 +14,9 @@ import registerAction, { registerForm } from './registerAction';
 const formSchema = z.object({
   email: z.string().email().min(10).max(30),
   password: z.string().min(8).max(30),
-  name:z.string().min(10).max(30),
+  firstname:z.string().min(10).max(30),
+  lastname:z.string().min(10).max(30),
+  tel:z.string().min(10).max(30),
   password_confirmation:z.string().min(8).max(30),
 });
 
@@ -28,21 +30,10 @@ const PageRegister = () => {
 
   const onSubmit = async (values: registerForm):Promise<any> => {
     try {
-     
-      // if(values.password !== values.password_confirmation) {
-      //   return false ;
-      // }
-      // password_confirmation
-      console.log(values)
       const role = await registerAction(values);
-    console.log(role)
-      // Handle routing based on role
       switch (role) {
-        case "owner":
-          router.push("/owner");
-          break;
         case "user":
-          router.push("/user");
+          router.push("/login");
           break;
         default:
           router.push("/");
@@ -55,7 +46,7 @@ const PageRegister = () => {
   };
 
   return (
-    <div className="nc-PageLogin" data-nc-id="PageLogin">
+    <div className="nc-PageLogin" data-nc-id="PageRegister">
       <div className="container mb-24 lg:mb-32">
         <h2 className="my-20 flex items-center justify-center text-3xl font-semibold leading-[115%] md:text-5xl md:leading-[115%]">
           Sing Up
@@ -110,6 +101,20 @@ const PageRegister = () => {
                   {errors.email && (
                     //@ts-ignore
                     <span className="text-red-500 text-sm">{errors.email.message}</span>
+                  )}
+                </FormItem>
+                <FormItem label="Telephone">
+                  <Input
+                    {...register("tel")}
+                    type="text"
+                    rounded="rounded-full"
+                    sizeClass="h-12 px-4 py-3"
+                    placeholder="example@example.com"
+                    className="border-neutral-300 bg-transparent placeholder:text-neutral-500 focus:border-primary"
+                  />
+                  {errors.tel && (
+                    //@ts-ignore
+                    <span className="text-red-500 text-sm">{errors.tel.message}</span>
                   )}
                 </FormItem>
                 <FormItem label="Password">

@@ -18,6 +18,7 @@ const getProduct = async (id: string): Promise<ProductType | undefined> => {
     const response = await axiosClient.get(`/public/products/${id}`);
     return response.data;
   } catch (error) {
+    console.log(error)
   }
 };
 
@@ -49,6 +50,7 @@ const SingleProductPage = async ({ params }: { params: { productId: string } }) 
       <div className="mb-20">
         <SectionProductHeader
          productId ={productId}
+         //@ts-ignore
           images={product.images}
           shoeName={pathOr('', ['title'], product)}
           prevPrice={pathOr(0, ['oldprice'], product)}
@@ -61,6 +63,7 @@ const SingleProductPage = async ({ params }: { params: { productId: string } }) 
 
       <div className="mb-28">
         <SectionProductInfo
+        //@ts-ignore
           overview={product.reviews}
           shipment_details={pathOr([], ['shipment_details'], product)}
           ratings={pathOr(0, ['rating'], product)}

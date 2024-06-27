@@ -11,6 +11,7 @@ import { CartItemType, cleanProductImages } from '@/data/types';
 import Loading from '../../loading';
 import EmtyCard from '@/shared/Heading/emtyCard';
 import { useCart } from '@/context/cartContext';
+import { notFound } from 'next/navigation';
 
 
 
@@ -66,11 +67,9 @@ const CartPage = () => {
   const { cartApi } = useCart();
 
  
-  if (!cartApi) {
-    return <Loading />;
-  }
-if(cartApi.cart_items.length === 0){
-return <EmtyCard />
+
+if(cartApi?.cart_items.length === 0 || !cartApi ){
+return notFound();
 }
   return (
     <div className="nc-CartPage">

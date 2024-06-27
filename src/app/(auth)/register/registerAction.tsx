@@ -3,7 +3,9 @@ import axios from "axios";
 import Cookies from 'universal-cookie';
 
 export type registerForm = {
-    name:string,
+    fistname:string,
+    lastname:string,
+    tel:string,
     email:string,
     password:string,
     password_confirmation:string
@@ -11,15 +13,10 @@ export type registerForm = {
 }
 export default async function registerAction(values:registerForm){
   try {
-    const response = await axios.post("http://127.0.0.1:8000/api/register", values);
+    const response = await axios.post("http://127.0.0.1:8000/register", values);
 
-    if (response.status === 200) {
-        const cookies = new Cookies();
-        const token = response.data.token;
-        const role = response.data.user.role;
-
-        cookies.set('Authorization', token);
-        cookies.set('userRole', role);
+    if (response.status === 201) {  
+        const role = response.data.role;
         return role ; // Return role
     } else {
         throw new Error(response.data.error); // Throw error

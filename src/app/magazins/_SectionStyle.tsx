@@ -17,7 +17,7 @@ const SectionStyle = () => {
       <div className="grid gap-5 lg:grid-cols-2">
         <div className="items-stretch gap-5 md:flex">
           <div className="basis-[40%] space-y-16">
-            <ButtonPrimary href="/products">Shop Now</ButtonPrimary>
+            <ButtonPrimary href="/products">Acheter Maintenant</ButtonPrimary>
 
             <div className="relative w-full">
               <Image
@@ -34,7 +34,7 @@ const SectionStyle = () => {
 
             <div className="space-y-5 rounded-2xl bg-primary p-5 text-white">
               <ButtonSecondary className="border-2 border-white bg-transparent">
-                2023 LogBook
+                LookBook 2023
               </ButtonSecondary>
               <h2 className="text-3xl font-medium">
                 {promoSection.promoTitle}
@@ -49,8 +49,8 @@ const SectionStyle = () => {
         <div className="space-y-10 md:pt-40 lg:pt-0">
           <div className="relative flex h-[350px] w-full items-center justify-center rounded-2xl bg-secondary">
             <Image
-src={woman}
-              alt="woman"
+              src={woman}
+              alt="femme"
               height={300}
               width={300}
               className="absolute bottom-0 mx-auto w-[80%] object-cover md:w-[60%]"

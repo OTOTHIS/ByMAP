@@ -25,7 +25,7 @@ const SectionMidBanner = () => {
             fontSize="text-xl"
             className="glassmorphism z-20 w-[80%] border-2 border-white text-white md:w-[60%]"
           >
-            Shop Now
+            Explorer
           </ButtonSecondary>
         </div>
       </div>

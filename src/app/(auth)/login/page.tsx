@@ -111,7 +111,7 @@ const {setUserApi} = useUser()
                 </Link>
                 <span className="block text-center text-sm text-neutral-500">
                   Don&apos;t have an account? {` `}
-                  <Link href="/signup" className="text-primary">
+                  <Link href="/register" className="text-primary">
                     Signup
                   </Link>
                 </span>

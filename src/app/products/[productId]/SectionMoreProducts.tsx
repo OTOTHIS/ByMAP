@@ -9,7 +9,7 @@ const SectionMoreProducts = async () => {
   const products = await getProducts({params:'test'});
   return (
     <div>
-      <Heading className="mb-0">Explore more products</Heading>
+      <Heading className="mb-0">Explore tous les produits</Heading>
 
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
         {products?.data.map((shoe:ProductType , index:number) => (

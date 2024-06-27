@@ -18,16 +18,16 @@ const SectionHeader = () => {
             {headerSection.heading}
           </div>
           <div className="flex items-center gap-7">
-            <ButtonSecondary>Shop Now</ButtonSecondary>
+            <ButtonSecondary>Magasinez Maintenant</ButtonSecondary>
             <ButtonSecondary className="flex items-center gap-1 border-2 border-white bg-transparent text-white">
-              <FaPlay /> Watch Trending
+              <FaPlay /> Regarder les Tendances
             </ButtonSecondary>
           </div>
         </div>
         <div className="flex basis-[47%] items-end overflow-hidden">
           <Image
             src={'https://luxloom.themealchemy.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero.d6af6818.png&w=1920&q=75'}
-            alt="hero image"
+            alt="image héro"
             width={300}
             height={300}
             className="-mb-16 w-full object-bottom"

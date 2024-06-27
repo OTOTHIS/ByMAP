@@ -38,9 +38,9 @@ const SectionProducts = () => {
       <div className="space-y-10">
         <div className="items-center justify-between md:flex">
           <Heading isMain className="mb-0">
-            2023 New Arrivals
+            Nouveau Produits
           </Heading>
-          <ButtonPrimary href="/products">Shop Now</ButtonPrimary>
+          <ButtonPrimary href="/products">Acheter Maintent</ButtonPrimary>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

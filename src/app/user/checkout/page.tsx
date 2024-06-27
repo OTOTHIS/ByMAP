@@ -19,6 +19,7 @@ import CheckoutForm from './CheckoutForm';
 import { loadStripe } from '@stripe/stripe-js';
 import { useCart } from '@/context/cartContext';
 import Loading from '@/app/loading';
+import { notFound } from 'next/navigation';
 
 
 const CheckoutPage = () => {
@@ -28,10 +29,9 @@ const CheckoutPage = () => {
 
   const { cartApi, loading } = useCart();
 
-  // useEffect(() => {
-  //   getCarts();
-  // }, [getCarts]);
-
+  if(cartApi?.cart_items.length === 0 || !cartApi ){
+    return notFound();
+    }
 
 // useEffect(() =>  getCarts(), []);
   const [tabActive, setTabActive] = useState<
@@ -183,7 +183,7 @@ const CheckoutPage = () => {
 
               {        //@ts-ignore
 
-        cartApi.cart_items.map((item:CartItemType) => renderProduct(item))}
+          cartApi?.cart_items.map((item:CartItemType) => renderProduct(item))}
             </div>
           
 

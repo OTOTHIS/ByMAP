@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
@@ -7,22 +7,27 @@ import { FaCheckCircle } from 'react-icons/fa';
 interface ShoeSizeButtonProps {
   disabled?: boolean;
   size: string;
+  onSelectSize: (size: string) => void;
 }
 
-const ShoeSizeButton: FC<ShoeSizeButtonProps> = ({ disabled, size }) => {
+const ShoeSizeButton: FC<ShoeSizeButtonProps> = ({ disabled, size, onSelectSize }) => {
   const [isDisabled, setIsDisabled] = useState(disabled);
   const [selected, setSelected] = useState(false);
 
-  // random for demo
   useEffect(() => {
     setIsDisabled(Math.random() > 0.5);
   }, []);
+
+  const handleSelect = () => {
+    setSelected(!selected);
+    onSelectSize(size); // Notify parent of the selected size
+  };
 
   return (
     <button
       type="button"
       disabled={isDisabled}
-      onClick={() => setSelected(!selected)}
+      onClick={handleSelect}
       className={`relative w-full rounded-xl py-10 font-medium disabled:bg-gray disabled:text-neutral-500 ${
         selected ? 'bg-primary text-white' : 'bg-gray text-black'
       }`}

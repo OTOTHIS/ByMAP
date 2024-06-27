@@ -4,8 +4,9 @@ import Cookies from 'universal-cookie';
 
 
 export default async function loginAction(email:string , password:string){
+    const link = process.env.NEXT_PUBLIC_LARAVEL_BACKEND_URL 
   try {
-    const response = await axios.post("http://127.0.0.1:8000/api/login", {
+    const response = await axios.post(`${link}/login`, {
         email,
         password,
     });

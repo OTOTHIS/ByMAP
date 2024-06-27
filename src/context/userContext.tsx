@@ -1,6 +1,7 @@
 "use client"
 import { axiosClient } from '@/components/axios/axios';
 import { UserType } from '@/data/types';
+import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import React, { createContext, useContext, useEffect, useState, ReactNode, FC } from 'react';
 import Cookies from 'universal-cookie';
@@ -61,18 +62,32 @@ export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   useEffect(() => {
     fetchUser().then(setUserApi).catch(console.error);
   }, []);
+
   const logout = async () => {
-    try {
-      await axiosClient.post('/logout');
+    const router = useRouter();
+    const cookie = new Cookies();
   
-     localStorage.removeItem('cart');
-     cookie.remove('Authorization');
-     cookie.remove('userRole');
-     router.push('/');
+    try {
+      const token = cookie.get('Authorization');
+  
+      if (token) {
+        await axios.post('http://localhost:8000/logout', null, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+      }
+  
+      localStorage.removeItem('cart');
+      cookie.remove('Authorization');
+      cookie.remove('userRole');
+  
+      router.push('/');
     } catch (error) {
       console.error('Error logging out:', error);
     }
   };
+  
 
   
   return (

@@ -15,6 +15,28 @@ export function cleanProductImages(images: string) {
 
   }
 
+  // types.ts
+export interface OrderItemType {
+  id: number;
+  order_id: number;
+  product_id: number;
+  quantity: number;
+  taille: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface OrderType {
+  id: number;
+  user_id: number;
+  magazin_id: number | null;
+  status: string;
+  created_at: string;
+  updated_at: string;
+  items: OrderItemType[];
+}
+
+
 
   
 export type ProductType = {
