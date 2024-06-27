@@ -65,18 +65,18 @@ const UserFacture = () => {
 
   return (
     <div className="App flex justify-center flex-col">
-      <ButtonPrimary className="my-5 self-center mx-auto self-end">
+      <ButtonPrimary className="my-5 mx-auto ">
         <PDFDownloadLink
           document={<Invoice data={invoiceData} />}
           fileName="facture.pdf"
         >
-          {({ blob, url, loading, error }) =>
+          {({  loading }) =>
             loading ? 'Chargement du document...' : 'Télécharger le PDF'
           }
         </PDFDownloadLink>
       </ButtonPrimary>
       <div className="bg-white rounded-lg shadow-lg px-8 py-10 max-w-xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-8">
           <div className="flex items-center">
             <img className="h-8 w-8 mr-2" src="/assets/images/logo.png" alt="Logo BYMAP" />
             <div className="text-gray-700 font-semibold text-lg">BYMAP</div>

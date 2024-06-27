@@ -6,7 +6,6 @@ import { FaRegBell } from 'react-icons/fa6';
 import { RiSearch2Line } from 'react-icons/ri';
 
 import avatar from '@/images/avatar.png';
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import Input from '@/shared/Input/Input';
 import Logo from '@/shared/Logo/Logo';
 
@@ -17,8 +16,7 @@ import { usePathname } from 'next/navigation';
 import { useUser } from '@/context/userContext';
 import {  fetchProductType } from '@/data/types';
 import { getProducts } from '@/data/fetches/Products';
-import ButtonCircle from '@/shared/Button/ButtonCircle';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
+
 
 const MainNav =  () => {
 const cookie = new Cookies()
@@ -33,9 +31,7 @@ const toggleDropdown = () => {
   setIsOpen(!isOpen);
 };
 
-const closeDropdown = () => {
-  setIsOpen(false);
-};
+
 
 const {logout} = useUser()
 const searshProduct  = async (e: React.ChangeEvent<HTMLInputElement>) =>{

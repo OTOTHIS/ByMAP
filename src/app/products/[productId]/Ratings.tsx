@@ -33,7 +33,7 @@ const ratingDetails = [
   },
 ];
 
-const Ratings: FC<RatingsProps> = ({ rating, reviews }) => {
+const Ratings: FC<RatingsProps> = ({ rating }) => {
   return (
     <div>
       <Heading className="mb-0">Ratings</Heading>

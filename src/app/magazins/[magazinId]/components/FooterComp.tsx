@@ -1,8 +1,10 @@
+import Logo from '@/shared/Logo/Logo';
 import Link from 'next/link';
 import { MdCopyright } from 'react-icons/md';
+import { aboutSectionDescription } from '../data/content';
+import { NavLinks } from '@/data/content';
 
-import { aboutSectionDescription, navLinks } from '../couture-cove/data/content';
-import Logo from './Logo/Logo';
+
 
 function FooterComp() {
   return (
@@ -21,7 +23,7 @@ function FooterComp() {
           </div>
         </div>
         <div className="flex justify-between border-b border-neutral-300 pb-6 md:text-2xl 2xl:text-3xl">
-          {navLinks.map((link) => (
+          {NavLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}

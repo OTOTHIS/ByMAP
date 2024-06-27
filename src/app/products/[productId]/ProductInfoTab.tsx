@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { note } from '@/data/content';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 import Heading from '@/shared/Heading/Heading';
-import { FaRegStar, FaShare } from 'react-icons/fa6';
+import { FaRegStar } from 'react-icons/fa6';
 import { Review } from '@/data/types';
 
 interface ProductInfoTabProps {

@@ -13,8 +13,7 @@ import Newsletter from './components/Newsletter';
 import Reviews from './components/Reviews';
 import { axiosClient } from '@/components/axios/axios';
 import { Magazin } from '@/data/types';
-import Direction from './components/direcection';
-import Link from 'next/link';
+
 //@ts-ignore
 const getMagazin = async (id: string): Promise<Magazin | undefined> => {
   try {

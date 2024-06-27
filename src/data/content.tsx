@@ -8,10 +8,6 @@ import type { NavItemType } from '@/components/NavItem';
 
 
 
-
-
-import type { BlogType } from './types';
-
 export const topNavLinks: NavItemType[] = [
   {
     id: 'ee46t',

@@ -8,8 +8,7 @@ import LikeButton from '@/components/LikeButton';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import InputNumber from '@/shared/InputNumber/InputNumber';
 import { CartItemType, cleanProductImages } from '@/data/types';
-import Loading from '../../loading';
-import EmtyCard from '@/shared/Heading/emtyCard';
+
 import { useCart } from '@/context/cartContext';
 import { notFound } from 'next/navigation';
 

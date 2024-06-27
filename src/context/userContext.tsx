@@ -54,7 +54,6 @@ interface UserProviderProps {
 // UserProvider component
 export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   const [userApi, setUserApi] = useState<UserType>();
-  const router = useRouter();
   const getUser = () => {
     fetchUser().then(setUserApi).catch(console.error);
   };

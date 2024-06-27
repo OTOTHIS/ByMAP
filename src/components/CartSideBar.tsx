@@ -489,7 +489,7 @@ const CartSideBar: React.FC<CartSideBarProps> = () => {
 
   const handleOpenMenu = () => setIsVisable(true);
   const handleCloseMenu = () => setIsVisable(false);
-  const { cartApi, error } = useCart();
+  const { cartApi } = useCart();
 
   const renderProduct = (item: CartItemType) => {
     const { product } = item;
