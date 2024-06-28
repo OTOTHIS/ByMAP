@@ -1,9 +1,9 @@
 customHeaders:
-  - pattern: "/api/public/magazins"
+  - pattern: '/api/*'
     headers:
-      - key: "Access-Control-Allow-Origin"
-        value: "*"
-      - key: "Access-Control-Allow-Methods"
-        value: "GET, POST, PUT, DELETE, OPTIONS"
-      - key: "Access-Control-Allow-Headers"
-        value: "Origin, Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token, Accept"
+      - key: Access-Control-Allow-Origin
+        value: '*'
+      - key: Access-Control-Allow-Methods
+        value: 'GET, POST, PUT, DELETE, OPTIONS'
+      - key: Access-Control-Allow-Headers
+        value: 'Origin, Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-Security-Token, Accept'
