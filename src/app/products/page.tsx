@@ -38,8 +38,13 @@ const [limit , setLimit] = useState<number>(LIMITNUMER)
 
 
   const [product, setProduct] = useState<fetchProductType | null>(null);
-
+  //@ts-ignore
+const [todos, setTodos] = useState([])
   useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(json => setTodos(json))
+
     const fetchProducts = async () => {
       try {
         const response = await getProducts({
@@ -81,6 +86,7 @@ const handleLimit = () => {
   return (
     <div className="">
       <div className="container relative flex flex-col lg:flex-row" id="body">
+        {JSON.stringify(todos)}
         <div className="pr-4 pt-10 lg:basis-1/3 xl:basis-1/4">
         
           <SidebarFilters  />

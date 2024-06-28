@@ -20,7 +20,9 @@ import SectionBrands from './home/SectionBrands';
 
 
 
+
 const page = () => {
+  
   return (
     <div>
       <div className="my-7">
@@ -29,6 +31,7 @@ const page = () => {
  <h1>
   {process.env.NEXT_PUBLIC_LARAVEL_BACKEND_URL }
  </h1>
+ 
       <div className="mb-32">
         <SectionBestDeals />
       </div>
