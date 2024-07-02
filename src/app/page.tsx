@@ -28,10 +28,10 @@ const page = () => {
       <div className="my-7">
         <SectionHeader />
       </div>
- <h1>
+ {/* <h1>
   {process.env.NEXT_PUBLIC_LARAVEL_BACKEND_URL }
  </h1>
- 
+  */}
       <div className="mb-32">
         <SectionBestDeals />
       </div>

@@ -68,9 +68,10 @@ export const UserProvider: FC<UserProviderProps> = ({ children }) => {
   
     try {
       const token = cookie.get('Authorization');
-  
+      const link = process.env.NEXT_PUBLIC_LARAVEL_BACKEND_URL 
+
       if (token) {
-        await axios.post('http://localhost:8000/logout', null, {
+        await axios.post(`${link}/logout`, null, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
